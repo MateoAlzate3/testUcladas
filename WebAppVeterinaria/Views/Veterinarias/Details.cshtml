@@ -1,0 +1,61 @@
+﻿@model WebAppVeterinaria.Models.Veterinaria
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="center-aling">
+        <h3>Detalles de la Veterinaria</h3>
+    </div>
+
+    <div class="card-panel grey lighten-5">
+        <h4>Detalles</h4>
+        <hr />
+        <table class="responsive-table">
+            <tbody>
+                <tr>
+                    <td><strong>Nit:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Nit)</td>
+                </tr>
+                <tr>
+                    <td><strong>Razon Social:</strong></td>
+                    <td>@Html.DisplayFor(model => model.RazonSocial)</td>
+                </tr>
+                <tr>
+                    <td><strong>Direccion:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Direccion)</td>
+                </tr>
+                <tr>
+                    <td><strong>Telefono:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Telefono)</td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Email)</td>
+                </tr>
+                <tr>
+                    <td><strong>Empleados:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Empleados)</td>
+                </tr>
+                <tr>
+                    <td><strong>FechaFundacion:</strong></td>
+                    <td>@Html.DisplayFor(model => model.FechaFundacion)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="center-align">
+    <a asp-action="Edit" asp-route-id="@Model?.id" class="btn waves-effect waves-light indigo darken-2" style="padding: 0px 10px; font-size: 14px; border-radius: 8px;">
+        <i class="material-icons left">edit</i>Editar
+    </a>
+    <a asp-action="Index" style="color: #2196F3; text-decoration: none; font-size: 16px; display: inline-flex; align-items: center;">
+        <i class="material-icons left" style="font-size: 16px; margin-right: 4px;">arrow_back</i> Volver a la Lista
+    </a>
+</div>
+
+
+
+
+

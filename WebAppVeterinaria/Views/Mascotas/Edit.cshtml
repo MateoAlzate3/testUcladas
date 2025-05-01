@@ -1,0 +1,57 @@
+﻿@model WebAppVeterinaria.Models.Mascota
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar datos de la Mascota</h1>
+
+<h4>Mascota</h4>
+<hr />
+<div class="row">
+    <div class="col s12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Especie" class="control-label"></label>
+                <input asp-for="Especie" class="form-control" />
+                <span asp-validation-for="Especie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Raza" class="control-label"></label>
+                <input asp-for="Raza" class="form-control" />
+                <span asp-validation-for="Raza" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Color" class="control-label"></label>
+                <input asp-for="Color" class="form-control" />
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaNacimiento" class="control-label"></label>
+                <input asp-for="FechaNacimiento" class="form-control" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Propietario" class="control-label"></label>
+                <input asp-for="Propietario" class="form-control" />
+                <span asp-validation-for="Propietario" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn waves-effect waves-light light-green darken-2" style="padding: 0px 10px; font-size: 14px; border-radius: 8px;">
+                <i class="material-icons left">save</i>Guardar
+            </button>
+        </form>
+        <div style="margin-top: 6px;">
+            <a asp-action="Index" style="color: #2196F3; text-decoration: none; font-size: 16px; display: inline-flex; align-items: center;">
+                <i class="material-icons left" style="font-size: 16px; margin-right: 4px;">arrow_back</i> Volver a la Lista
+            </a>
+    </div>
+</div>
+
+

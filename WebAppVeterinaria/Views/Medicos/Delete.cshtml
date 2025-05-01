@@ -1,0 +1,78 @@
+﻿@model WebAppVeterinaria.Models.Medico
+
+@{
+    ViewData["Title"] = "Eliminar Médico";
+}
+
+<div class="container">
+    <h3>¿Estás seguro de que deseas eliminar este médico?</h3>
+
+    <div class="card-panel grey lighten-5">
+        <h4>Eliminar Médico: <td>@Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apellido)</td></h4>
+        <hr />
+
+        <table class="responsive-table">
+            <tbody>
+                <tr>
+                    <td><strong>Cedula:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Cedula)</td>
+                </tr>
+                <tr>
+                    <td><strong>Nombre:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Nombre)</td>
+                </tr>
+                <tr>
+                    <td><strong>Apellido:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Apellido)</td>
+                </tr>
+                <tr>
+                    <td><strong>Direccion:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Direccion)</td>
+                </tr>
+                <tr>
+                    <td><strong>Telefono:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Telefono)</td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Email)</td>
+                </tr>
+                <tr>
+                    <td><strong>FechaNacimiento:</strong></td>
+                    <td>@Html.DisplayFor(model => model.FechaNacimiento)</td>
+                </tr>
+                <tr>
+                    <td><strong>Genero:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Genero)</td>
+                </tr>
+                <tr>
+                    <td><strong>Pais:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Pais)</td>
+                </tr>
+                <tr>
+                    <td><strong>Departamento:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Departamento)</td>
+                </tr>
+                <tr>
+                    <td><strong>Ciudad:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Ciudad)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="center-align">
+    <form asp-action="Delete" style="display: inline;">
+        <input type="hidden" asp-for="id" />
+        <button type="submit" class="btn waves-effect waves-light red darken-2" style="padding: 0px 8px; font-size: 12px; border-radius: 8px;">
+            <i class="material-icons left">delete</i>Eliminar</button>
+    </form>
+    <a asp-action="Index" class="waves-effect waves-light"
+       style="color: #2196F3; text-decoration: none; font-size: 16px; display: inline-flex; align-items: center;">
+        <i class="material-icons left" style="font-size: 16px; margin-right: 4px;">arrow_back</i> Volver a la Lista</a>
+</div>
+
+
+
+

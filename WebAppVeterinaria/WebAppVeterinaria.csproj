@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\index_style.css" />
+    <None Include="wwwroot\css\registro_style.css" />
+    <None Include="wwwroot\css\theme_style.css" />
+    <None Include="wwwroot\fonts\BebasNeue.otf" />
+    <None Include="wwwroot\fonts\GrechenFuemen-Regular.ttf" />
+    <None Include="wwwroot\imagenes\pet.png" />
+    <None Include="wwwroot\js\componentesMaterialize.js" />
+    <None Include="wwwroot\js\jquery-3.7.1.min.js" />
+    <None Include="wwwroot\materialize\css\materialize.css" />
+    <None Include="wwwroot\materialize\css\materialize.min.css" />
+    <None Include="wwwroot\materialize\js\materialize.js" />
+    <None Include="wwwroot\materialize\js\materialize.min.js" />
+    <None Include="wwwroot\materialize\LICENSE" />
+    <None Include="wwwroot\materialize\README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+</Project>

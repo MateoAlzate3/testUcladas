@@ -1,0 +1,67 @@
+﻿@model IEnumerable<WebAppVeterinaria.Models.CitaMedica>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Citas Médicas</h1>
+
+<p>
+    <a asp-action="Create" class="btn-small light-green darken-3 waves-effect waves-light" style="border-radius: 8px; display: inline-flex; align-items: center; text-decoration: none; font-size: 16px;">
+        Asignar nueva cita <i class="material-icons" style="margin-left: 4px; vertical-align: middle;">assignment</i>
+    </a>
+</p>
+<table class="responsive-table" >
+    <thead>
+        <tr>
+            <th>
+                FechaCita
+            </th>
+            <th>
+                Sintomas
+            </th>
+            <th>
+                Diagnostico
+            </th>
+            <th>
+                Formula
+            </th>
+            <th>
+                Mascota
+            </th>
+            <th>
+                Medico
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCita)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sintomas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diagnostico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Formula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mascota.Nombre)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Medico.Nombre) @Html.DisplayFor(modelItem => item.Medico.Apellido)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.id" class="btn-small indigo darken-2 waves-effect waves-light" style="padding: 0px 8px; font-size: 12px; border-radius: 8px;">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.id" class="btn-small orange darken-1 waves-effect waves-light" style="padding: 0px 8px; font-size: 12px; border-radius: 8px;">Detalle</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id" class="btn-small red waves-effect waves-light" style="margin:2px 0px 0px; padding: 0px 8px; font-size: 12px; border-radius: 8px;">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

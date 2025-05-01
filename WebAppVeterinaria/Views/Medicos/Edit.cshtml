@@ -1,0 +1,104 @@
+﻿@model WebAppVeterinaria.Models.Medico
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar Médico</h1>
+
+<h4>Médico</h4>
+<hr />
+<div class="row">
+    <div class="col s12 l9">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="row">
+                <div class="col s12">
+                    <label asp-for="Cedula" class="control-label"></label>
+                    <input asp-for="Cedula" class="form-control" />
+                    <span asp-validation-for="Cedula" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6">
+                    <label asp-for="Nombre" class="control-label"></label>
+                    <input asp-for="Nombre" class="form-control" />
+                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                </div>
+                <div class="col s6">
+                    <label asp-for="Apellido" class="control-label"></label>
+                    <input asp-for="Apellido" class="form-control" />
+                    <span asp-validation-for="Apellido" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <label asp-for="Direccion" class="control-label"></label>
+                    <input asp-for="Direccion" class="form-control" />
+                    <span asp-validation-for="Direccion" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6">
+                    <label asp-for="Telefono" class="control-label"></label>
+                    <input asp-for="Telefono" class="form-control" />
+                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                </div>
+                <div class="col s6">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>   
+            <div class="row">
+                <div class="col s12">
+                    <label asp-for="FechaNacimiento" class="control-label"></label>
+                    <input asp-for="FechaNacimiento" type="text" class="datepicker" />
+                    <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <label asp-for="Genero" class="control-label"></label>
+                    <input asp-for="Genero" class="form-control" />
+                    <span asp-validation-for="Genero" class="text-danger"></span>
+                </div>
+            </div>            
+            <div class="row">
+                <div class="col s12">
+                    <label asp-for="Pais" class="control-label"></label>
+                    <input asp-for="Pais" class="form-control" />
+                    <span asp-validation-for="Pais" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <label asp-for="Departamento" class="control-label"></label>
+                    <input asp-for="Departamento" class="form-control" />
+                    <span asp-validation-for="Departamento" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <label asp-for="Ciudad" class="control-label"></label>
+                    <input asp-for="Ciudad" class="form-control" />
+                    <span asp-validation-for="Ciudad" class="text-danger"></span>
+                </div>
+            </div>            
+                            
+            <button type="submit" class="btn waves-effect waves-light light-green darken-2" style="padding: 0px 10px; font-size: 14px; border-radius: 8px;">
+                <i class="material-icons left">save</i>Guardar
+            </button>     
+        </form> 
+        <div style="margin-top: 6px;">
+            <a asp-action="Index" style="color: #2196F3; text-decoration: none; font-size: 16px; display: inline-flex; align-items: center;">
+                <i class="material-icons left" style="font-size: 16px; margin-right: 4px;">arrow_back</i> Volver a la Lista
+            </a>
+        </div>
+    </div>   
+</div>
+
+
+
+

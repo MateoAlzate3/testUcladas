@@ -1,0 +1,72 @@
+﻿@model WebAppVeterinaria.Models.CitaMedica
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Asignar Cita Medica</h1>
+
+<h4>Cita Medica</h4> 
+<hr />
+<div class="row">
+    <div class="col s12">
+        <form asp-action="Create">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="row">
+                <div class="col s12 ">
+                    <label asp-for="MedicoId" class="control-label">Médico</label>
+                    <select asp-for="MedicoId" class="form-control" asp-items="ViewBag.MedicoId"></select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <label asp-for="MascotaId" class="control-label">Mascota</label>
+                    <select asp-for="MascotaId" class="form-control" asp-items="ViewBag.MascotaId"></select>
+                </div>   
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <label asp-for="FechaCita" class="control-label"></label>
+                    <input asp-for="FechaCita" class="form-control" type="datetime-local" />
+                    <span asp-validation-for="FechaCita" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 input-field">
+                    <label asp-for="Sintomas" class="control-label"></label>
+                    <input asp-for="Sintomas" class="form-control" />
+                    <span asp-validation-for="Sintomas" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 input-field">
+                    <label asp-for="Diagnostico" class="control-label"></label>
+                    <input asp-for="Diagnostico" class="form-control" />
+                    <span asp-validation-for="Diagnostico" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 input-field">
+                    <label asp-for="Formula" class="control-label"></label>
+                    <input asp-for="Formula" class="form-control" />
+                    <span asp-validation-for="Formula" class="text-danger"></span>
+                </div>
+            </div>    
+            
+            <div class="col s12 center-align">
+                <button type="submit" class="btn waves-effect waves-light light-green darken-2" style="padding: 0px 10px; font-size: 14px; border-radius: 8px;">
+                    <i class="material-icons left">assignment_turned_in</i>Crear
+                </button>
+            </div>
+        </form>
+        <div style="margin-top: 6px;">
+            <a asp-action="Index" class="waves-effect waves-light"
+               style="color: #2196F3; text-decoration: none; font-size: 16px; display: inline-flex; align-items: center;">
+                <i class="material-icons left" style="font-size: 16px; margin-right: 4px;">arrow_back</i> Regresar
+            </a>
+        </div>
+    </div>
+</div>
+
+
+

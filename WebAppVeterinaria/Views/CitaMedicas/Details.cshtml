@@ -1,0 +1,56 @@
+﻿@model WebAppVeterinaria.Models.CitaMedica
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <div class="center-align">
+        <h3>Detalles de la Cita</h3>
+    </div>
+
+    <div class="card-panel grey lighten-5">
+        <h4>Informacion de la Cita:</h4>
+        <hr />
+
+        <table class="responsive-table">
+            <tbody>
+                <tr>
+                    <td><strong>Fecha Cita:</strong></td>
+                    <td>@Html.DisplayFor(model => model.FechaCita)</td>
+                </tr>
+                <tr>
+                    <td><strong>Sintomas:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Sintomas)</td>
+                </tr>
+                <tr>
+                    <td><strong>Diagnostico:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Diagnostico)</td>
+                </tr>
+                <tr>
+                    <td><strong>Formula:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Formula)</td>
+                </tr>
+                <tr>
+                    <td><strong>Mascota:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Mascota.Nombre)</td>
+                </tr>
+                <tr>
+                    <td><strong>Medico:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Medico.Nombre)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="center-align">
+    <a asp-action="Edit" asp-route-id="@Model?.id" class="btn waves-effect waves-light indigo darken-2" style="padding: 0px 10px; font-size: 14px; border-radius: 8px;">
+        <i class="material-icons left">edit</i>Editar
+    </a>
+    <a asp-action="Index" style="color: #2196F3; text-decoration: none; font-size: 16px; display: inline-flex; align-items: center;">
+        <i class="material-icons left" style="font-size: 16px; margin-right: 4px;">arrow_back</i> Volver a la Lista
+    </a>
+</div>
+
+

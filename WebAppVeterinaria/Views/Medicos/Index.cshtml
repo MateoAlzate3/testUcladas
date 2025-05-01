@@ -1,0 +1,102 @@
+﻿@model IEnumerable<WebAppVeterinaria.Models.Medico>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Médicos</h1>
+
+<p>
+    <a asp-action="Create" class="btn-small light-green darken-3 waves-effect waves-light" style="border-radius: 8px; display: inline-flex; align-items: center;  text-decoration: none; font-size: 16px;">
+        Crear nuevo Medico <i class="material-icons" style="margin-left: 4px; vertical-align: middle;">person_add</i>
+    </a>
+</p>
+
+<table class="responsive-table">
+    <thead>
+        <tr>
+            <th>
+                Cedula
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Apellido
+            </th>
+            <th>
+                Direccion
+            </th>
+            <th>
+                Telefono
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                FechaNacimiento
+            </th>
+            @*  <th>
+                @Html.DisplayNameFor(model => model.Genero)
+            </th> *@
+            @* <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Departamento)
+            </th> *@
+            <th>
+                Ciudad
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cedula)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                </td>
+                @*  <td>
+                @Html.DisplayFor(modelItem => item.Genero)
+            </td> *@
+                @*  <td>
+                @Html.DisplayFor(modelItem => item.Pais)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departamento)
+            </td> *@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ciudad)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id" class="btn-small indigo darken-2 waves-effect waves-light" style="padding: 0px 8px; font-size: 12px; border-radius: 8px;">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.id" class="btn-small orange darken-1 waves-effect waves-light" style="padding: 0px 8px; font-size: 12px; border-radius: 8px;">Detalle</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id" class="btn-small red waves-effect waves-light" style="margin:2px 0px 0px; padding: 0px 8px; font-size: 12px; border-radius: 8px;">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+        
+

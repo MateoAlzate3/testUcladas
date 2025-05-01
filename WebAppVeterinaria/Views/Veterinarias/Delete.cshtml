@@ -1,0 +1,58 @@
+﻿@model WebAppVeterinaria.Models.Veterinaria
+
+@{
+    ViewData["Title"] = "Eliminar Veterinaria";
+}
+
+<div class="container">
+    <h3>¿Estás seguro de que deseas eliminar esta veterinaria?</h3>
+
+    <div class="card-panel grey lighten-5">
+        <h4>Detalles de la Veterinaria</h4>
+        <hr />
+
+        <table class="responsive-table">
+            <tbody>
+                <tr>
+                    <td><strong>Nit:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Nit)</td>
+                </tr>
+                <tr>
+                    <td><strong>Razon Social:</strong></td>
+                    <td>@Html.DisplayFor(model => model.RazonSocial)</td>
+                </tr>
+                <tr>
+                    <td><strong>Direccion:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Direccion)</td>
+                </tr>
+                <tr>
+                    <td><strong>Telefono:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Telefono)</td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Email)</td>
+                </tr>
+                <tr>
+                    <td><strong>Empleados:</strong></td>
+                    <td>@Html.DisplayFor(model => model.Empleados)</td>
+                </tr>
+                <tr>
+                    <td><strong>FechaFundacion:</strong></td>
+                    <td>@Html.DisplayFor(model => model.FechaFundacion)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="center-align">
+    <form asp-action="Delete" style="display: inline;">
+        <input type="hidden" asp-for="id" />
+        <button type="submit" class="btn waves-effect waves-light red darken-2" style="padding: 0px 8px; font-size: 12px; border-radius: 8px;">
+            <i class="material-icons left">delete</i>Eliminar</button>
+    </form>
+    <a asp-action="Index" class="waves-effect waves-light"
+       style="color: #2196F3; text-decoration: none; font-size: 16px; display: inline-flex; align-items: center;">
+        <i class="material-icons left" style="font-size: 16px; margin-right: 4px;">arrow_back</i> Volver a la Lista</a>
+</div>
